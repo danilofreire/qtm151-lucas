@@ -40,43 +40,6 @@ You will work with two tables, one named `cars` and the other named `brand_data`
 | brand       | TEXT    | Brand name                           |
 | origin_type | TEXT    | Origin type (Domestic or Foreign)    |
 
-### Tasks
-
-1. **Establish a Connection**
-   - First, please establish a connection to your database, either via Python or directly in your database management system.
-
-2. **Create Tables and Insert Data**
-   - Read the files `brand_data.csv` and `cars.csv` using the `to_sql` command. Call the new datasets `brand_data` and `cars`, respectively, in the server.
-   - OR: Create the tables `brand_data` and `cars` using the data provided below.
-   - Just do one of the two options above.
-
-3. **Subset and Sort**
-   - Select the columns `make`, `price`, `mpg`, and `brand`.
-   - Use `WHERE` to get a subset of cars whose brand is `Buick`.
-   - Sort the results by `brand` in ascending order.
-   - Write the query in multiple lines, one line per clause.
-
-4. **Groupby + Aggregate + Sort**
-   - From `cars`, obtain the average of `mpg` by `brand` using `GROUP BY`.
-   - Use `ORDER BY` to sort by the average of `mpg` in descending order.
-   - Limit the results to the top 5 brands with the highest average `mpg`.
-
-5. **Groupby + Aggregate + Sort with HAVING**
-   - From `cars`, obtain the average of `mpg` by `brand` using `GROUP BY`.
-   - Sort the results by the average of `mpg` in descending order.
-   - Use `HAVING` to filter brands with an average `mpg` strictly higher than 20.
-   - Make sure to separate your `HAVING` and `GROUP BY` clauses.
-   - HINT: Use `HAVING AVG(mpg)` rather than an alias for the code to work correctly.
-
-6. **Groupby and Multiple Aggregations**
-   - From `cars`, obtain the average, min, and max of each brand's `price` using `GROUP BY`.
-   - Make sure to split the aggregations into separate columns.
-   - Sort the results by `brand` in ascending order.
-
-7. **Merge**
-   - From `cars`, `LEFT JOIN` the dataset `brand_data` using `brand` as a merging variable.
-   - Select the columns `make`, `price`, `mpg`, and `origin_type`.
-   - Sort the results by `origin_type` in ascending order.
 
 ### Submission
 
